@@ -67,15 +67,8 @@ function Navigate(props) {
       </Navbar>
     </Container> 
     <SignIn  userSignIn = {props.userSignIn} setUserSignIn={props.setUserSignIn}
-      openSignup={handleSignup}
-      show={signIn}
-      onHide={() => setSignIn(false)}
-      />
-    <SignUp
-      openSignin={handleSignin}
-      show={signUp}
-      onHide={() => setSignUp(false)} 
-      />
+      openSignup={handleSignup} show={signIn} onHide={() => setSignIn(false)} />
+    <SignUp openSignin={handleSignin} show={signUp} onHide={() => setSignUp(false)} />
     </>
   );
 }

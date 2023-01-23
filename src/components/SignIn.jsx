@@ -24,6 +24,8 @@ export default function SignIn(props) {
       props.setUserSignIn({
         ...props.userSignIn,
         isLogin: true,
+        //
+        listAs : dataUser.listAs,
       });
       localStorage.setItem("UserSignIn", JSON.stringify(props.userSignIn));
       alert("login succses!");

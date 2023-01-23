@@ -1,8 +1,7 @@
-import React from "react";
 import Navbar from "./Navbar";
 // import HomeLogin from "../pages/HomeLogin";
 import { Button, Container,Row, Col } from "react-bootstrap";
-
+import React, { useEffect } from "react";
 // IMPORT IMAGES
 import Name from "../images/IP.png";
 import Ema from "../images/Email.png";
@@ -16,7 +15,9 @@ import Password from "../images/Pass.png"
 // import { Pass } from "react-bootstrap-icons";
 
 export default function Profile(props) {
-
+  useEffect(() => {
+    document.body.style.background = "rgba(196, 196, 196, 0.25)";
+  });
   return (
     <div className="" style={{marginTop:"9rem"}}>
       {/* <HomeLogin /> */}

@@ -4,7 +4,7 @@ import { Row,Col,Form,ToggleButton,Button,InputGroup } from 'react-bootstrap';
 // import { MdDateRange } from 'react-icons/md';
 import '../style/style.css';
 import React, { useState } from 'react';
-import { ImCalendar } from 'react-icons/im';
+// import { ImCalendar } from 'react-icons/im';
 import "../style/style.css"
 //
 import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
@@ -42,11 +42,10 @@ function Filter() {
     //       { name: '5+', value: '5' },
     //     ];
 
-  return (
-
+    
     // <Col className='d-flex flex-column fixed-top' style={{marginTop:"6rem"}} sm={3} md={3}>
     // <Form>
-
+    
     // <div className='d-flex flex-column gap-1'>
     //     <h5 className='fw-bold'>Type Of Rent</h5>
     //     <div className='d-flex gap-3 justify-content-between'>
@@ -69,7 +68,7 @@ function Filter() {
     //         <h5 className='fw-bold'>Date</h5>
     //     </div>
     //         <div>
-    //         <InputGroup>
+    //         <InputGroup>hgh 
     //         <Button className='align-item-center' variant="secondary" size="xl" id="search"><ImCalendar /></Button>
     //         <Form.Control type="date" placeholder="" />
     //         </InputGroup>
@@ -158,6 +157,9 @@ function Filter() {
     // </div>
     // </Form>
     // </Col>
+
+
+    return (
     <Col
     className='d-flex flex-column fixed-top' style={{marginTop:"5rem"}} sm={3} md={3}>
       <Form>

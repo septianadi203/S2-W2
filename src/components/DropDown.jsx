@@ -1,18 +1,20 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/esm/Button";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Popover from "react-bootstrap/Popover";
+// import Button from "react-bootstrap/esm/Button";
+// import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+// import Popover from "react-bootstrap/Popover";
 import Robin from '../images/robin.jpg';
-import ProfileImg from '../images/user2.png';
-import CalenderImg from "../images/calendar.png";
-import BillImg from "../images/bill.png";
-import LogoutImg from "../images/logout1.png";
+import Profile from '../images/user2.png';
+import Cabin from "../images/cabin.png";
+import Calender from "../images/calendar.png";
+import Bill from "../images/bill.png";
+import Logout from "../images/logout1.png";
 import '../style/style.css';
 
-import { BsPerson, BsCalendar3 } from "react-icons/bs";
-import { RiNewspaperLine } from "react-icons/ri";
-import { FiLogOut } from "react-icons/fi";
+// import { BsPerson, BsCalendar3 } from "react-icons/bs";
+// import { RiNewspaperLine } from "react-icons/ri";
+// import { FiLogOut } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
@@ -22,6 +24,10 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 
 function DropDown(props) {
+
+  const dataId = JSON.parse(localStorage.getItem("DataId"));
+  const status = JSON.parse(localStorage.getItem("UserSignUp"));
+  const { id } = useParams();
   const navigate = useNavigate();
   return (
     <>
@@ -30,16 +36,38 @@ function DropDown(props) {
           <Image roundedCircle className="si" src={Robin} />
         </DropdownToggle>
         <DropdownMenu>
-          <Dropdown.Item className="dropDownNav">
-            <BsPerson />
+          <Dropdown.Item 
+          onClick={() => {
+            navigate("/profile");
+          }}
+          className="dropDownNav">
+            <img className="pe-2" src={Profile} alt="Profile" />
             <span style={{ color: "black" }}> Profile</span>
           </Dropdown.Item>
-          <Dropdown.Item className="dropDownNav">
-            <RiNewspaperLine />
-            <span style={{ color: "black" }}> My Booking</span>
-          </Dropdown.Item>
-          <Dropdown.Item className="dropDownNav">
-            <BsCalendar3 />
+
+          {status.listAs === "Tenant" ? (
+            <Dropdown.Item
+              onClick={() => {
+                navigate(`/mybooking/${dataId}`);
+              }}
+              className="dropDownNav"
+            >
+              <img className="pe-2" src={Calender} alt="My Booking" />
+              <span style={{ color: "black" }}> My Booking</span>{" "}
+            </Dropdown.Item>
+          ) : (
+            <Dropdown.Item className="dropDownNav">
+              <img className="pe-2" src={Cabin} alt="Add Property" />
+              <span style={{ color: "black" }}>Add Property</span>{" "}
+            </Dropdown.Item>
+          )}
+
+          <Dropdown.Item
+          onClick={() => {
+            navigate(`/invoice`);
+          }}
+          className="dropDownNav">
+            <img className="pe-2" src={Bill} alt="History" />
             <span style={{ color: "black" }}> History</span>
           </Dropdown.Item>
           <Dropdown.Divider />
@@ -54,7 +82,7 @@ function DropDown(props) {
             }}
             className="dropDownNav"
           >
-            <FiLogOut />
+            <img className="pe-2" src={Logout} alt="" />
             <span style={{ color: "black" }}> Logout </span>
           </Dropdown.Item>
         </DropdownMenu>

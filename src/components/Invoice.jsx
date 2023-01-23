@@ -1,131 +1,142 @@
-import { Table, Container, Button, Modal } from "react-bootstrap"
+import { Container, Button, Col, Row } from "react-bootstrap"
 import Logo from "../images/Icon.svg";
-import Bukti from "../images/Bukti.jpg";
+// import Bukti from "../images/Bukti.jpg";
 import Navbar from "../components/Navbar";
-import { useState } from "react"
+// import { useState } from "react"
 import Kosong from "../images/kosong.jpg";
 import Isi from "../images/isi.jpg";
 import Garis from "../images/garis.jpg";
 import Qr from "../images/qr.jpg";
+import { useEffect } from "react";
 
 function MyBooking(props) {
-    // const [show, setShow] = useState(false);
-
-    // const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
-    return (
+    useEffect(() => {
+    document.body.style.background = "rgba(196, 196, 196, 0.25)";
+    });   
+    const Data = JSON.parse(localStorage.getItem("Data"))
+    const getData = JSON.parse(localStorage.getItem("Date"));
+    const Profile = JSON.parse(localStorage.getItem("UserSignUp"));
+    console.log(Data.amenities);
+return (
 
 <div style={{marginTop:"9rem"}}>
-        <Navbar userSignIn={props.userSignIn} setUserSignIn={props.setUserSignIn} /><Container>
-            <div style={{ marginTop: 30, boxShadow: "0px 0px 1px", borderRadius: 10, padding: "0px 30px 0px 30px" }}>
-                <div className="d-flex" style={{ justifyContent: "space-between" }}>
-                    <div>
-                        <img src={Logo} alt="" />
-                    </div>
-                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                        <h2 className="fw-bold">Booking</h2>
-                        <h5>Saturday, 30 March 2020</h5>
-                    </div>
+        <Navbar userSignIn={props.userSignIn} setUserSignIn={props.setUserSignIn} />
+        <Container className="myc fmb" style={{ width: "60%", marginTop: "200px" }}>
+        <div className="border border-3 p-4 pe-0 pb-0">
+          <Row style={{}} className="d-flex jcb">
+            <Col className="" md="auto" lg={4}>
+              <img src={Logo} alt="" />
+            </Col>
+            <Col className="" md="auto" lg={4}>
+              <h2 className="text-center p-0 m-0 fw-bold">Booking</h2>
+              <p className="text-center p-0 m-0">{getData.check_in}</p>
+            </Col>
+          </Row>
+          <Row style={{}} className="d-flex jcb align-items-center pb-3">
+            <Col className="" md="auto" lg={4}>
+              <h5 className="fw-bold">House Astina</h5>
+              <p>{Data.address}</p>
+              <p className="bg-success w-50 text-center p-1 bg-opacity-10 text-success">Waiting Payment</p>
+            </Col>
+            <Col className="" md="auto" lg={4}>
+              <div className="d-flex flex-column ">
+                <div className="d-flex  align-items-center gap-4">
+                  <div>
+                    <img src={Kosong} alt="" />
+                  </div>
+                  <div className="d-flex flex-column">
+                    <span>Check-in</span>
+                    <span>{getData.check_in}</span>
+                  </div>
+                  <div className="ms-3 d-flex flex-column">
+                    <span>Amenities</span>
+                    <span>{Data.amenities}</span>
+                  </div>
                 </div>
-                <div className="d-flex" style={{ justifyContent: "space-between" }}>
-                    <div>
-                        <h3 className="fw-bold">House Astina</h3>
-                        <p>Jl. Elang IV Perum Permata Bintaro Residence</p>
-                        <p>Pondok Aren,Tangerang Selatan</p>
-                        <img src={""} alt="" />
-                    </div>
-                    <div style={{ marginRight: -80, marginTop: 10 }}>
-                        <img src={""} alt="" />
-                    </div>
-                    <div>
-                        <div className="d-flex">
-                        <img src={Kosong} alt="" style={{width: "10%", height: "10%"}} className="mt-3 me-3" />
-                            <div>
-                            <h5>Check-in</h5>
-                            <p>30 March 2020</p>
-                            </div>
-                        </div>
-                        <div className="ms-1">
-                        <img src={Garis} alt=""/>
-                        </div>
-                        <div className="d-flex">
-                        <img src={Isi} alt="" style={{width: "10%", height: "10%"}} className="mt-3 me-3" />
-                            <div>
-                            <h5>Check-Out</h5>
-                            <p>30 March 2021</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <h5>Amenities</h5>
-                            <p>Furnished</p>
-                        </div>
-                        <div className="mt-5 pt-3">
-                            <h5>Type of Rent</h5>
-                            <p>Year</p>
-                        </div>
-                    </div>
-                    <div className="d-flex me-5" style={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                
-                        <img src={Qr} alt="" style={{ width: "100%", height: "auto" }} className="" />
-                
-                        <input
-                            className="d-block position-absolute h-100 w-100"
-                            id="formFile"
-                            type="file"
-                            name="image"
-                            //         onChange={handleChangePhoto}
-                            style={{ cursor: "pointer", opacity: 0 }} />
-                        <span className="d-block py-3 px-3">
-                            TCK0101
-                        </span>
 
-                    </div>
+                <div className="d-flex ">
+                  <img style={{ marginLeft: "6px" }} src={Garis} alt="" />
                 </div>
-                <Table>
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Full Name</th>
-                            <th>Gender</th>
-                            <th>Phone</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Robin</td>
-                            <td>Female</td>
+                <div className="d-flex  align-items-center gap-4">
+                  <div>
+                    <img src={Isi} alt="" />
+                  </div>
 
-                            <td>083896833112</td>
-                            <td className="fw-bold">Long Time rent</td>
-                            <td>:</td>
-                            <td className="fw-bold">1 Year</td>
-                        </tr>
-                        <tr>
-                            <td colSpan={5} style={{ fontWeight: "bold" }}>
-                                Total
-                            </td>
-                            <td>:</td>
-                            <td style={{ fontWeight: "bold", color: "green" }}> Rp 3.000.000</td>
-                        </tr>
-                    </tbody>
-                </Table>
-            </div>
-            <div style={{ display: "flex", justifyContent: "end" }}>
-                {/* <Button className="px-5">
-                    PAY
-                </Button> */}
-                <Modal>
-                    <Modal.Body>Pembayaran Anda Akan di Konfirmasi dalam 1 x 24 Jam
-                        Untuk melihat pesanan <a href="">Klik Disini</a> Terimakasih</Modal.Body>
-                </Modal>
-            </div>
-        </Container>
+                  <div className="d-flex flex-column ">
+                    <span>Check-Out</span>
+                    <span>{getData.check_out}</span>
+                  </div>
+                  <div className="ms-3 d-flex flex-column ">
+                    <span>Type of Rent</span>
+                    <span>{Data.rent}</span>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col className="d-flex flex-column justify-content-center align-items-center gap-2" md="auto" lg={4}>
+              <img src={Qr} alt="" style={{ width: 150 }} />
+              <Button
+                type="submit"
+                //onSubmit={handleChangePhoto}
+                className="position-relative p-0 m-0 bg text-dark bd"
+                variant="outline-primary"
+              ></Button>
+              {/* <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>upload proof of payment</Form.Label>
+              <Form.Control type="file" />
+            </Form.Group> */}
+            </Col>
+          </Row>
+          <Row className="d-flex">
+            <Row>
+              <Col className="d-flex" md="auto" lg={8}>
+                <Col className="d-flex align-items-center" md="auto" lg={1}>
+                  <p className="m-0 py-2">No</p>
+                </Col>
+                <Col className="d-flex align-items-center" md="auto" lg={3}>
+                  <p className="m-0">Full Name</p>
+                </Col>
+                <Col className="d-flex align-items-center" md="auto" lg={3}>
+                  <p className="m-0">Gender</p>
+                </Col>
+                <Col className="d-flex align-items-center" md="auto" lg={3}>
+                  <p className="m-0">Phone</p>
+                </Col>
+              </Col>
+            </Row>
+            <Row className="border border-start-0 border-end-0  ">
+              <Col className="d-flex" lg={8}>
+                <Col className="d-flex align-items-center" md="auto" lg={1}>
+                  <p className="m-0">1</p>
+                </Col>
+                <Col className="d-flex align-items-center" md="auto" lg={3}>
+                  <p className="m-0">{Profile.fullName}</p>
+                </Col>
+                <Col className="d-flex align-items-center" md="auto" lg={3}>
+                  <p className="m-0">{Profile.gendre}</p>
+                </Col>
+                <Col className="d-flex align-items-center" md="auto" lg={3}>
+                  <p className="m-0">{Profile.phone}</p>
+                </Col>
+              </Col>
+              <Col className="d-flex align-items-center">
+                <p className="ps-3 m-0">Long time rent</p>
+              </Col>
+              <Col className="d-flex align-items-center">
+                <p className="m-0 py-2">: </p>
+              </Col>
+            </Row>
+            <Row className="justify-content-end">
+              <Col className="d-flex align-items-center" lg={2}>
+                <p className=" m-0 ps-3 py-2">Total</p>
+              </Col>
+              <Col className="d-flex align-items-center" lg={2}>
+                <p className="m-0 text-success fw-bold">: {Data.price}</p>
+              </Col>
+            </Row>
+          </Row>
+        </div>
+      </Container>
 </div> 
     );
 }

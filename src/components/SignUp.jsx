@@ -14,6 +14,7 @@ export default function SignUp(props) {
     listAs: "",
     gendre: "",
     address: "",
+    phone: "",
   });
 
   const redirectSignin = (e) => {
@@ -85,18 +86,18 @@ export default function SignUp(props) {
                 placeholder="Password"
               />
             </Form.Group>
-            <Form.Group className="mb-2" onChange={handleOnChange}>
+            <Form.Group className="mb-2" controlId="useAs" onChange={handleOnChange}>
               <Form.Label className='fw-bold'>List As</Form.Label>
               <Form.Select name="listAs" aria-label="Default select example">
               <option> </option>
-              <option value="User">Tenant</option>
+              <option value="Tenant">Tenant</option>
               <option value="Owner">Owner</option>
               </Form.Select>
             </Form.Group>
-            <Form.Group className="mb-2" onChange={handleOnChange}>
+            <Form.Group className="mb-2" controlId="gendre" onChange={handleOnChange}>
               <Form.Label className='fw-bold'>Gender</Form.Label>
               <Form.Select name="gendre" aria-label="Default select example">
-              <option> </option>
+              <option > </option>
               <option value="Laki-laki">Laki-laki</option>
               <option value="Perempuan">Perempuan</option>
               </Form.Select>
@@ -104,7 +105,7 @@ export default function SignUp(props) {
             <Form.Group className="mb-2" onChange={handleOnChange}>
               <Form.Label className='fw-bold'>Phone</Form.Label>
               <Form.Control
-                name="Phone"
+                name="phone"
                 type="text"
                 placeholder="Phone"
               />

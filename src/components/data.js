@@ -10,7 +10,10 @@ const listData = [
         Bats: "2",
         Area: "1800 ft",
       },
-    addres: "Tangerang Selatan, Pondok Aren",
+    // addres: "Tangerang Selatan, Pondok Aren",
+    address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
     id : 2,
@@ -23,7 +26,9 @@ const listData = [
         Bats: "2",
         Area: "1800 ft",
       },
-    addres: "Tangerang Selatan, Pondok Aren",
+      address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+      description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
     id : 3,
@@ -36,7 +41,9 @@ const listData = [
     Bats: "2",
     Area: "1800 ft",
     },
-    addres: "Tangerang Selatan, Pondok Aren",
+    address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
     id : 4,
@@ -49,7 +56,9 @@ const listData = [
     Bats: "2",
     Area: "1800 ft",
     },    
-    addres: "Tangerang Selatan, Pondok Aren",
+    address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
     id : 5,
@@ -62,7 +71,9 @@ const listData = [
     Bats: "2",
     Area: "1800 ft",
     },
-    addres: "Tangerang Selatan, Pondok Aren",
+    address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
     id : 6,
@@ -74,7 +85,10 @@ const listData = [
     beds: "3",
     Bats: "2",
     Area: "1800 ft",
-    },addres: "Tangerang Selatan, Pondok Aren",
+    },
+    address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
     id : 7,
@@ -87,7 +101,9 @@ const listData = [
     Bats: "2",
     Area: "1800 ft",
      },
-    addres: "Tangerang Selatan, Pondok Aren",
+     address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+     description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
     id : 8,
@@ -100,21 +116,24 @@ const listData = [
     Bats: "2",
     Area: "1800 ft",
     },
-    addres: "Tangerang Selatan, Pondok Aren",
+    address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
     {
-    id : 9,
-    amenities: "Furnished",
-    image: "Img9.jpg",
-    price: "Rp.5.500.000",
-    rent: "Year",
-    property: {
-    beds: "3",
-    Bats: "2",
-    Area: "1800 ft",
-    },
-    // property: "2 Beds, 2 Bats, 1,900 sqft",
-    addres: "Tangerang Selatan, Pondok Aren",
+      id : 9,
+      amenities: "Furnished",
+      image: "Img9.jpg",
+      price: "Rp.3.500.000",
+      rent: "Year",
+      property: {
+      beds: "3",
+      Bats: "2",
+      Area: "1800 ft",
+      },
+      address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem sit culpa eligendi illo accusantium rem repudiandae libero architecto, debitis nobis distinctio explicabo aliquid. Quae, est voluptates vero vitae obcaecati aliquam impedit consequuntur ipsa eligendi? Ex atque, dolorem ullam consequuntur maxime ipsum nostrum, deleniti quos necessitatibus officiis commodi, delectus eos.",
     },
 ]
 

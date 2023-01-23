@@ -17,7 +17,7 @@ function Content() {
               <div className="p-3 bg">
               <Card key={index} className="p-2">
                   <span className="position-absolute px-3 py-1 bg-white rounded-2 fs-6 mt-2 ms-2">{value.amenities}</span>
-                <Card.Img onClick={() => navigate(`/detail-property/${index + 1}`)} variant="top" src={require("../images/" + value.image)} />
+                <Card.Img onClick={() => navigate(`/detail/${index + 1}`)} variant="top" src={require("../images/" + value.image)} />
                   <Card.Body className=" bs m-0 p-0 d-flex flex-column gap-1">
                     <Card.Title className="fs18 fw-semibold m-0 p-0 mt-2">
                       {value.price} / {value.rent}
