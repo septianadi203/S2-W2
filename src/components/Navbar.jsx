@@ -50,7 +50,7 @@ function Navigate(props) {
         </Col>
         <Col className='d-flex align-items-center' >
           <Nav className='ms-auto'>
-            {!props.userSignIn.isLogin ? (
+          {!localStorage.getItem("UserSignIn") ? (
             <> 
             <Button className='fw-bold btn-light shadow-sm me-3' onClick={() => setSignIn(true)}>Sign in</Button>
             <Button className='fw-bold btn-light shadow-sm me-3' onClick={() => setSignUp(true)}>Sign up</Button>

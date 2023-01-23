@@ -78,9 +78,9 @@ export default function Profile(props) {
               </div>
             </div>
           </Col>
-          <Col className="p-0 d-flex flex-column gap-3" sm={4}>
+          <Col className=" d-flex flex-column gap-3 px-3 me-2" sm={4}>
             <div>
-              <img className="w-100 rounded" src={Robin} alt="" />
+              <img className="w-100 rounded pt-4" src={Robin} alt="" />
             </div>
             <div>
               <Button className="w-100">Change Foto Profile</Button>

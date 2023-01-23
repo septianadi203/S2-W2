@@ -1,9 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Image from "react-bootstrap/Image";
-// import Button from "react-bootstrap/esm/Button";
-// import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-// import Popover from "react-bootstrap/Popover";
+
 import Robin from '../images/robin.jpg';
 import Profile from '../images/user2.png';
 import Cabin from "../images/cabin.png";
@@ -12,9 +10,6 @@ import Bill from "../images/bill.png";
 import Logout from "../images/logout1.png";
 import '../style/style.css';
 
-// import { BsPerson, BsCalendar3 } from "react-icons/bs";
-// import { RiNewspaperLine } from "react-icons/ri";
-// import { FiLogOut } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 import DropdownToggle from "react-bootstrap/esm/DropdownToggle";

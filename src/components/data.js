@@ -22,9 +22,9 @@ const listData = [
     price: "Rp.3.000.000",
     rent: "Year",
     property: {
-        beds: "3",
-        Bats: "2",
-        Area: "1800 ft",
+        beds: "1",
+        Bats: "1",
+        Area: "800 ft",
       },
       address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
       description:
@@ -37,9 +37,9 @@ const listData = [
     price: "Rp.5.000.000",
     rent: "Year",
     property: {
-    beds: "3",
-    Bats: "2",
-    Area: "1800 ft",
+    beds: "2",
+    Bats: "1",
+    Area: "1200 ft",
     },
     address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
     description:
@@ -52,9 +52,9 @@ const listData = [
     price: "Rp.13.000.000",
     rent: "Year",
     property: {
-    beds: "3",
-    Bats: "2",
-    Area: "1800 ft",
+    beds: "4",
+    Bats: "3",
+    Area: "2200 ft",
     },    
     address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
     description:
@@ -67,9 +67,9 @@ const listData = [
     price: "Rp.3.500.000",
     rent: "Year",
     property: {
-    beds: "3",
-    Bats: "2",
-    Area: "1800 ft",
+    beds: "1",
+    Bats: "1",
+    Area: "810 ft",
     },
     address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
     description:
@@ -82,9 +82,9 @@ const listData = [
     price: "Rp.5.500.000",
     rent: "Year",
     property: {
-    beds: "3",
+    beds: "2",
     Bats: "2",
-    Area: "1800 ft",
+    Area: "1900 ft",
     },
     address: "Jl. Elang IV Perum Permata Bintaro Residence, Tangerang Selatan, Pondok Aren",
     description:
@@ -94,7 +94,7 @@ const listData = [
     id : 7,
     amenities: "Furnished",
     image: "Img7.jpg",
-    price: "Rp.13.000.000",
+    price: "Rp.3.000.000",
     rent: "Year",
     property: {
     beds: "3",
@@ -109,7 +109,7 @@ const listData = [
     id : 8,
     amenities: "Furnished",
     image: "Img8.jpg",
-    price: "Rp.3.500.000",
+    price: "Rp.3.000.000",
     rent: "Year",
     property: {
     beds: "3",
@@ -124,7 +124,7 @@ const listData = [
       id : 9,
       amenities: "Furnished",
       image: "Img9.jpg",
-      price: "Rp.3.500.000",
+      price: "Rp.3.000.000",
       rent: "Year",
       property: {
       beds: "3",

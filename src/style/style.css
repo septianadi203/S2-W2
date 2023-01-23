@@ -68,3 +68,19 @@
 .bd {
     border: none !important;
   }
+
+  .myc {
+    width: 1035px !important;
+    left: 201px !important;
+    top: 193px !important;
+    border-radius: 5px !important;
+  }
+  
+  .fmb {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .jcb {
+    justify-content: space-between !important;
+  }

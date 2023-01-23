@@ -60,7 +60,7 @@ function MyBooking(props) {
 <div style={{marginTop:"9rem"}}>
         <Navbar userSignIn={props.userSignIn} setUserSignIn={props.setUserSignIn} />
         <Container className="myc fmb" style={{ width: "60%", marginTop: "200px" }}>
-        <div className="border border-3 p-4 pe-0 pb-0">
+        <div className="border border-3 p-4 pe-0 pb-0" style={{backgroundColor:"white"}}>
           <Row style={{}} className="d-flex jcb">
             <Col className="" md="auto" lg={4}>
               <img src={Logo} alt="" />

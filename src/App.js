@@ -1,7 +1,9 @@
 import Home from './pages/Home';
 import React, { useState } from 'react';
 // import Navigate from './components/Navbar';
-// import NavigateLogin from './components/NavbarLogin';
+import MyBookingIn from "./components/MyBookingIn";
+import { AddProperty } from './components/AddProperty';
+import HomeOwner from './components/HomeOwner';
 import listData from './components/data';
 import Profile from './components/Profile';
 // import HomeLogin from './pages/HomeLogin';
@@ -11,6 +13,7 @@ import MyBookingNext from './components/MyBookingNext';
 import DetailProperty from './components/DetailProperty';
 import './App.css';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+// import IndexOwner from './components/IndexOwner';
 
 
 
@@ -29,6 +32,9 @@ function App() {
         <Route path='/mybookingnext' element={<MyBookingNext userSignIn={userSignIn} setUserSignIn={setUserSignIn} />}/>
         <Route path='/invoice/' element={<Invoice userSignIn={userSignIn} setUserSignIn={setUserSignIn} />}/>
         <Route path='/detail/:id' element={<DetailProperty book userSignIn={userSignIn} setUserSignIn={setUserSignIn} listData={listData} />}/>
+        <Route path='/add-property/' element={<AddProperty />}/>
+        <Route path='/index-owner/' element={<HomeOwner  />} />
+        <Route path='/booking-in/' element={<MyBookingIn userSignIn={userSignIn} setUserSignIn={setUserSignIn} />} />
 
       </Routes>
     </BrowserRouter>
